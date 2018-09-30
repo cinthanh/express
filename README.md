@@ -11,3 +11,7 @@
 ```sh
     sudo npm install nodemon -g
 ```
+### install ejs template
+```sh
+    sudo npm install ejs --save
+```

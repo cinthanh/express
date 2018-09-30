@@ -15,6 +15,10 @@ var app = express();
 // apply middleware
 app.use(logger); */
 
+// View engine
+app.set('view engine', 'ejs');
+app.set('views',path.join(__dirname, 'views'));
+
 // apply body-parser is Middleware plugin
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -24,10 +28,6 @@ app.use(bodyParser.urlencoded({
 // Set static path | # node render views 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var person = {
-    name: 'Steve DaoJS',
-    age: 123
-}; 
 var people = [
     {
         gender: 'Man',
@@ -45,12 +45,26 @@ var people = [
         age: 31
     },
 ];
-
 app.get('/',function(req, res) {
-    //res.send('Welcome Home Edit'); // response is resulf return from server Node
-    //res.json(person);
-    res.json(people);
+    //res.send('Welcome'); // response is resulf return from server Node
+    var someText = "@lorem this good";
+    res.render('index',{title: someText,users:people});
+    
 });
+
+// add Peoples
+app.post('/people/add',function(req,res) {
+    var newPeople = {
+        gender: req.body.gender,
+        age: req.body.age,
+        jobs: req.body.jobs
+    };
+
+    console.log('route: /people/add -> Form submitted');
+    //console.log(req.body.gender);
+    console.log(newPeople);
+});
+
 
 
 
