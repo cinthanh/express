@@ -24,8 +24,32 @@ app.use(bodyParser.urlencoded({
 // Set static path | # node render views 
 app.use(express.static(path.join(__dirname, 'public')));
 
+var person = {
+    name: 'Steve DaoJS',
+    age: 123
+}; 
+var people = [
+    {
+        gender: 'Man',
+        jobs: 'Developer',
+        age: 33
+    },
+    {
+        gender: 'Strong',
+        jobs: 'Developer PHP',
+        age: 39
+    },
+    {
+        gender: 'Woman',
+        jobs: 'Developer JS',
+        age: 31
+    },
+];
+
 app.get('/',function(req, res) {
-    res.send('Welcome Home'); // response is resulf return from server Node
+    //res.send('Welcome Home Edit'); // response is resulf return from server Node
+    //res.json(person);
+    res.json(people);
 });
 
 

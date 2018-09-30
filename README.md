@@ -6,3 +6,8 @@
 ```shell
     node app // Hello Word
 ```
+### install nodemon
+    quickly change
+```sh
+    sudo npm install nodemon -g
+```
