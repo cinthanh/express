@@ -1,5 +1,16 @@
 <% include particles/header %>
 <h1>Add People</h1>
+
+    <% if (errInfo != undefined) { %>
+        <div style="background-color: pink; padding : 10px;">
+            <ul>
+                <% errInfo.forEach(function(err) { %>
+                    <li><%=err.msg%></li>
+                <%}) %>
+            </ul>
+        </div>
+    <% } %>
+
 <form action="/people/add" method="POST">
     <label for="gender">Gender</label><br>
     <input type="text" name="gender" id="gender">

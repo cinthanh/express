@@ -15,3 +15,8 @@
 ```sh
     sudo npm install ejs --save
 ```
+### install express-validator
+```sh
+    sudo npm install express-validator --save
+```
+### watch(https://www.youtube.com/watch?v=gnsO8-xJ8rs&t=6s)
