@@ -19,4 +19,4 @@
 ```sh
     sudo npm install express-validator --save
 ```
-### watch(https://www.youtube.com/watch?v=gnsO8-xJ8rs&t=6s)
+### watch(https://www.youtube.com/watch?v=gnsO8-xJ8rs&t=6s) : 51:00
